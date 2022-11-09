@@ -1,0 +1,8 @@
+@use 'colors' as *;
+
+.wrapper {
+	margin: 2em auto;
+	width: 600px;
+	background-color: $white;
+	box-shadow: 0 0 10px $black;
+}

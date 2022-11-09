@@ -1,0 +1,92 @@
+@use 'colors' as *;
+@use 'components';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: rgb(233, 233, 233);
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 1em;
+	height: 200px;
+	background-color: $green;
+	text-align: center;
+	color: $white;
+	text-transform: uppercase;
+	&__text {
+		margin-top: 1em;
+	}
+}
+
+.bottom {
+	padding: 2em 1.4em;
+	&__label {
+		display: block;
+		margin-bottom: 0.5em;
+		font-size: 1.8rem;
+	}
+	&__input,
+	&__select {
+		margin-bottom: 1.4em;
+		width: 100%;
+		padding: 0.5em 0.7em;
+		border: 1px solid rgb(185, 185, 185);
+		border-radius: 5px;
+	}
+	&__btn {
+		display: block;
+		margin: 1.2em auto;
+		width: 60%;
+		font-size: 2.2rem;
+		padding: 0.8em 1.6em;
+		border: none;
+		border-radius: 8px;
+		color: #fff;
+		background-color: $green;
+		transition: background-color 0.4s;
+		cursor: pointer;
+	}
+
+	&__btn:hover {
+		background-color: rgb(0, 168, 59);
+	}
+
+	&__cost-info {
+		display: none;
+		margin-top: 1em;
+		text-align: center;
+		font-size: 1.8rem;
+	}
+
+	&__cost {
+		font-weight: bold;
+	}
+
+	&__error {
+		text-align: center;
+		color: $red;
+		font-size: 1.8rem;
+	}
+}
